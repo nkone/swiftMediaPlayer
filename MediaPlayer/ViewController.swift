@@ -8,15 +8,21 @@
 
 import UIKit
 
+var linkTest = ""
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var linkField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello ")
-        print("hi there")
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func submitButton(_ sender: Any) {
+        if linkField.text != "" {
+            linkTest = linkField.text!
+            performSegue(withIdentifier: "submitSegue", sender: self)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
