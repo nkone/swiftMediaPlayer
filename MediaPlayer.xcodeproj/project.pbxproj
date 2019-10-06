@@ -13,6 +13,7 @@
 		05B22783234830C000F872EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B22782234830C000F872EB /* Assets.xcassets */; };
 		05B22786234830C000F872EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B22784234830C000F872EB /* LaunchScreen.storyboard */; };
 		05B2278E23483BCB00F872EB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2278D23483BCB00F872EB /* SecondViewController.swift */; };
+		4E033A452D581FD97A0B1537 /* Pods_MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F97C78D8C6644B1D07D6A6 /* Pods_MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		05B22785234830C000F872EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B22787234830C000F872EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B2278D23483BCB00F872EB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		06F97C78D8C6644B1D07D6A6 /* Pods_MediaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4FE31887157A270AAF3A05 /* Pods-MediaPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.release.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		F9556581281D7C054DCC6BAF /* Pods-MediaPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.debug.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E033A452D581FD97A0B1537 /* Pods_MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				05B2277A234830BC00F872EB /* MediaPlayer */,
 				05B22779234830BC00F872EB /* Products */,
+				DFA80C61864446A1FEA5B525 /* Pods */,
+				3141CEA9B731AB88DA9D60AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = MediaPlayer;
 			sourceTree = "<group>";
 		};
+		3141CEA9B731AB88DA9D60AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06F97C78D8C6644B1D07D6A6 /* Pods_MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFA80C61864446A1FEA5B525 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9556581281D7C054DCC6BAF /* Pods-MediaPlayer.debug.xcconfig */,
+				2A4FE31887157A270AAF3A05 /* Pods-MediaPlayer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05B2278A234830C000F872EB /* Build configuration list for PBXNativeTarget "MediaPlayer" */;
 			buildPhases = (
+				CF81CCC8C5214DF4E13DE5EA /* [CP] Check Pods Manifest.lock */,
 				05B22774234830BC00F872EB /* Sources */,
 				05B22775234830BC00F872EB /* Frameworks */,
 				05B22776234830BC00F872EB /* Resources */,
+				5B7A5806B16882F23DD37D76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B7A5806B16882F23DD37D76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF81CCC8C5214DF4E13DE5EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MediaPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05B22774234830BC00F872EB /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		05B2278B234830C000F872EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9556581281D7C054DCC6BAF /* Pods-MediaPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		05B2278C234830C000F872EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4FE31887157A270AAF3A05 /* Pods-MediaPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

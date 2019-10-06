@@ -7,20 +7,17 @@
 //
 
 import UIKit
-
+import YoutubePlayerView
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var youtubeView: YoutubePlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        //youtubeView.loadWithVideoId("TPjAsus_bZo")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        textLabel.sizeToFit()
-        textLabel.layoutIfNeeded()
-        textLabel.text = linkTest
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
