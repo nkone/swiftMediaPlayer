@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBAction func submitButton(_ sender: Any) {
         if linkField.text != "" {
             linkTest = linkField.text!
-            performSegue(withIdentifier: "submitSegue", sender: self)
+           // performSegue(withIdentifier: "submitSegue", sender: self)
         }
     }
     override func didReceiveMemoryWarning() {
