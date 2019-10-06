@@ -2,7 +2,7 @@
 //  Movie.swift
 //  MediaPlayer
 //
-//  Created by Phat Truong on 10/5/19.
+//  Created by Phat Truong on 10/6/19.
 //  Copyright © 2019 Phat Truong. All rights reserved.
 //
 
