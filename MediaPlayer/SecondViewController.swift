@@ -18,9 +18,6 @@ class SecondViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        textLabel.sizeToFit()
-        textLabel.layoutIfNeeded()
-        textLabel.text = linkTest
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
