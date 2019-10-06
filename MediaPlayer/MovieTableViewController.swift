@@ -15,7 +15,12 @@ class MovieTableViewController: UITableViewController {
     //MARK: Private methods
     
     private func loadMovies() {
+        let moviePhoto = UIImage(named: "noGameNoLife")
         
+        guard let movie1 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
+            fatalError("Unable to instantiate movie 1")
+        }
+        movies += [movie1]
     }
     
     
@@ -28,6 +33,7 @@ class MovieTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadMovies()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,24 +44,33 @@ class MovieTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+        return movies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cellIdentifier = "MovieTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MovieTableViewCell else {
+            fatalError("The dequeued cell is not an instance of MovieTableViewCell.")
+        }
+        
+        let movie = movies[indexPath.row]
+        
+        cell.movieTitleLabel.text = movie.name
+        cell.movieDescriptionLabel.text = "hello world"
+        cell.movieImageView.image = movie.image
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

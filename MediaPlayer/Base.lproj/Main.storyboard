@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Movie Table View Controller-->
         <scene sceneID="bj0-bd-eVM">
             <objects>
-                <tableViewController id="kOu-Yf-Irg" sceneMemberID="viewController">
+                <tableViewController id="kOu-Yf-Irg" customClass="MovieTableViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="igB-Rk-cQJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,9 +77,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-Ls-izi">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powerUp" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-Ls-izi">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="IeC-Gm-JQL"/>
+                                                <constraint firstAttribute="width" constant="90" id="oOo-8X-rgY"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybi-wL-DwS">
                                             <rect key="frame" x="98" y="11" width="261" height="23"/>
@@ -96,11 +99,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="oHQ-Ls-izi" secondAttribute="bottom" id="525-Ii-cmN"/>
+                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="leading" secondItem="kNq-jH-7Wc" secondAttribute="leading" id="7IP-O6-SO5"/>
+                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="leading" secondItem="kNq-jH-7Wc" secondAttribute="leading" id="dMq-yJ-98J"/>
+                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="top" secondItem="kNq-jH-7Wc" secondAttribute="top" id="jrP-Sg-xlh"/>
+                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="top" secondItem="kNq-jH-7Wc" secondAttribute="top" id="pKa-bX-H25"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="movieDescriptionLabel" destination="aUv-Jt-usE" id="018-0I-wiQ"/>
-                                    <outlet property="movieImageView" destination="oHQ-Ls-izi" id="f46-sB-0f9"/>
-                                    <outlet property="movieTitleLabel" destination="Ybi-wL-DwS" id="INy-YP-8Er"/>
+                                    <outlet property="movieImageView" destination="oHQ-Ls-izi" id="jvA-U8-koM"/>
+                                    <outlet property="movieTitleLabel" destination="Ybi-wL-DwS" id="FCo-5K-zss"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,4 +125,7 @@
             <point key="canvasLocation" x="724" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="powerUp" width="16" height="16"/>
+    </resources>
 </document>
