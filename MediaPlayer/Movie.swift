@@ -13,8 +13,10 @@ class Movie {
     var name : String
     var image : UIImage?
     var rating : Int
+    public static var movieStats = MovieStats?.self
     
     init?(name: String, image: UIImage?, rating: Int) {
+        
         
         guard !name.isEmpty else {
             return nil
