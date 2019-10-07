@@ -55,7 +55,7 @@ class MovieDataAPI {
         
     }
     
-    func fetchVideos(movieID: Int){
+    func fetchVideos(movieID: Int, successHandler: @escaping (MovieVideos) -> ()){
         
         let movieURL = URL(string: String("https://api.themoviedb.org/3/movie/\(movieID)/videos?api_key=30ef26c14fd01093fbf61368cb1cfd9d&language=en-US"))
         urlSession.dataTask(with: movieURL!){(data, response, error) in
@@ -77,8 +77,8 @@ class MovieDataAPI {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
                 let object = try decoder.decode(MovieVideos.self, from: data)
-
-                print(object)
+                successHandler(object)
+               // print(object)
             } catch {
                 print("decode fail")
                 return
