@@ -17,6 +17,12 @@ class MovieTableViewController: UITableViewController {
     //MARK: Private methods
     
     private func loadMovies() {
+       // var index = 1
+        for movieTest in Movie.movieStats.results! {
+            print("\(movieTest)")
+        }
+       /* let totalMovies = Movie.movieStats.results!.count
+        print("\(totalMovies)")
         let moviePhoto = UIImage(named: "noGameNoLife")
         
         guard let movie1 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
@@ -26,7 +32,7 @@ class MovieTableViewController: UITableViewController {
             fatalError("Unable to instantiate movie 1")
         }
         
-        movies += [movie1, movie2]
+        movies += [movie1, movie2]*/
     }
     
     
