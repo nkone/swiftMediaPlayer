@@ -13,7 +13,7 @@ class Movie {
     var name : String
     var image : UIImage?
     var rating : Int
-    public static var movieStats = MovieStats?.self
+    public static var movieStats = MovieStats(page: 1, totalResults: 500, totalPages: 1000, results: nil)
     
     init?(name: String, image: UIImage?, rating: Int) {
         

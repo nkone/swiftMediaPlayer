@@ -11,11 +11,16 @@ import YoutubePlayerView
 
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var trailerView: YoutubePlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieDataAPI.fetchMovie(sucesseHandler: Movie.movieStats)
+        movieDataAPI.fetchMovie(){
+            object in
+            Movie.movieStats = object!
+            print(Movie.movieStats.page)
+            
+        }
         trailerView.loadWithVideoId("quj8sK3Phh8")
         print(movies[movieIndex].name)
     }

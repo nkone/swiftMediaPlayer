@@ -12,7 +12,7 @@ public struct MovieStats: Codable {
     public let page: Int
     public let totalResults: Int
     public let totalPages: Int
-    public let results: [Movies]
+    public let results: [Movies]?
     
 }
 
