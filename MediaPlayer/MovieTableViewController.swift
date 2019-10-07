@@ -8,35 +8,51 @@
 
 import UIKit
 
-
+var movieStrings = [String]()
 class MovieTableViewController: UITableViewController {
     
+    @IBAction func homeButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     //MARK: Private methods
     private func loadMovies() {
        // var index = 1
-        
-
-        /*
-        guard let movie2 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
-            fatalError("Unable to instantiate movie 1")
-        }*/
-        //print(movies[0].name)
+        movieDataAPI.fetchMovie(){
+            object in
+            movieStats = object!
+            for eachMovie in movieStats.results! {
+                movies.append(Movie(name: eachMovie.title, image: nil, rating: eachMovie.voteAverage, eachMovie.posterPath, eachMovie.releaseDate)!)
+                print(eachMovie.title)
+            }
+            for movie in movieStats.results! {
+                var movieVideos = MovieVideos(id: 5, results: [])
+                movieDataAPI.fetchVideos(movieID: movie.id){
+                    object in
+                    movieVideos = object
+                    movieStrings.append(movieVideos.results![0].key)
+                    print(movieVideos.results![0].key)
+                }
+            }
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+        }
     }
 
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
 
+        super.viewDidLoad()
+        loadMovies()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        loadMovies()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,8 +80,9 @@ class MovieTableViewController: UITableViewController {
         let movie = movies[indexPath.row]
         
         cell.movieTitleLabel.text = movie.name
-        cell.movieDescriptionLabel.text = String(movie.rating)
+        cell.movieRatingLabel.text = String(movie.rating)
         cell.movieImageView.downloaded(from: "https://image.tmdb.org/t/p/w500\(movie.url)")
+        cell.movieReleaseDateLabel.text = movie.release
         // Configure the cell...
 
         return cell
@@ -75,6 +92,7 @@ class MovieTableViewController: UITableViewController {
         movieIndex = indexPath.row
         performSegue(withIdentifier: "watchSegue", sender: self)
     }
+  
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

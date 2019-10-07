@@ -14,9 +14,11 @@ class Movie {
     var image : UIImage?
     var rating : Float
     var url : String
+    var release : String
+    
     public static var movieStats = MovieStats(page: 1, totalResults: 500, totalPages: 1000, results: nil)
     
-    init?(name: String, image: UIImage?, rating: Float, _ url: String) {
+    init?(name: String, image: UIImage?, rating: Float, _ url: String, _ release: String) {
         
         guard !name.isEmpty else {
             return nil
@@ -29,5 +31,6 @@ class Movie {
         self.image = image
         self.rating = rating
         self.url = url
+        self.release = release
     }
 }

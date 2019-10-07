@@ -15,15 +15,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let moviePhoto = UIImage(named: "noGameNoLife")
-        movieDataAPI.fetchMovie(){
-            object in
-            movieStats = object!
-            for eachMovie in movieStats.results! {
-                movies.append(Movie(name: eachMovie.title, image: nil, rating: eachMovie.voteAverage, eachMovie.posterPath)!)
-                print(eachMovie.title)
-            }
-        }
+        //let moviePhoto = UIImage(named: "noGameNoLife")
 
         // Do any additional setup after loading the view.
     }
