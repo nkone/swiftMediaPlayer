@@ -8,9 +8,11 @@
 
 import UIKit
 
+var movieIndex = 0
+var movies = [Movie]()
 class MovieTableViewController: UITableViewController {
     
-    var movies = [Movie]()
+    
 
     //MARK: Private methods
     
@@ -63,7 +65,7 @@ class MovieTableViewController: UITableViewController {
         let movie = movies[indexPath.row]
         
         cell.movieTitleLabel.text = movie.name
-        cell.movieDescriptionLabel.text = "hello world"
+        cell.movieDescriptionLabel.text = "quj8sK3Phh8"
         cell.movieImageView.image = movie.image
         
         // Configure the cell...
@@ -71,7 +73,10 @@ class MovieTableViewController: UITableViewController {
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        movieIndex = indexPath.row
+        performSegue(withIdentifier: "watchSegue", sender: self)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

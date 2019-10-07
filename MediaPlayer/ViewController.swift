@@ -9,20 +9,17 @@
 import UIKit
 import YoutubePlayerView
 
-var linkTest = ""
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var linkField: UITextField!
+    @IBOutlet weak var trailerView: YoutubePlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        trailerView.loadWithVideoId("quj8sK3Phh8")
+        print(movies[movieIndex].name)
     }
-
-    @IBAction func submitButton(_ sender: Any) {
-        if linkField.text != "" {
-            linkTest = linkField.text!
-           // performSegue(withIdentifier: "submitSegue", sender: self)
-        }
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
