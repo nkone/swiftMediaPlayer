@@ -22,7 +22,11 @@ class MovieTableViewController: UITableViewController {
         guard let movie1 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
             fatalError("Unable to instantiate movie 1")
         }
-        movies += [movie1]
+        guard let movie2 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
+            fatalError("Unable to instantiate movie 1")
+        }
+        
+        movies += [movie1, movie2]
     }
     
     
