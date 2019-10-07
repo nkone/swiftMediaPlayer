@@ -15,16 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var trailerView: YoutubePlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieDataAPI.fetchMovie(){
-            object in
-            Movie.movieStats = object!
-            print(Movie.movieStats.page)
-            
-        }
         trailerView.loadWithVideoId("quj8sK3Phh8")
         print(movies[movieIndex].name)
     }
-    var movieDataAPI = MovieDataAPI()
+    //var movieDataAPI = MovieDataAPI()
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

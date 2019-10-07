@@ -15,8 +15,6 @@
 		05B22781234830BC00F872EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B2277F234830BC00F872EB /* Main.storyboard */; };
 		05B22783234830C000F872EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B22782234830C000F872EB /* Assets.xcassets */; };
 		05B22786234830C000F872EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B22784234830C000F872EB /* LaunchScreen.storyboard */; };
-		35548972234AD0F900E954A6 /* MovieStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35548970234AD0F900E954A6 /* MovieStats.swift */; };
-		35548973234AD0F900E954A6 /* MovieDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35548971234AD0F900E954A6 /* MovieDataAPI.swift */; };
 		4E033A452D581FD97A0B1537 /* Pods_MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F97C78D8C6644B1D07D6A6 /* Pods_MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +31,6 @@
 		05B22787234830C000F872EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06F97C78D8C6644B1D07D6A6 /* Pods_MediaPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MediaPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4FE31887157A270AAF3A05 /* Pods-MediaPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.release.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		35548970234AD0F900E954A6 /* MovieStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieStats.swift; path = /Users/tfan/Desktop/mediaPlayer/MediaPlayer/MovieStats.swift; sourceTree = "<absolute>"; };
-		35548971234AD0F900E954A6 /* MovieDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieDataAPI.swift; path = /Users/tfan/Desktop/mediaPlayer/MediaPlayer/MovieDataAPI.swift; sourceTree = "<absolute>"; };
 		F9556581281D7C054DCC6BAF /* Pods-MediaPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MediaPlayer.debug.xcconfig"; path = "Target Support Files/Pods-MediaPlayer/Pods-MediaPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,8 +67,6 @@
 		05B2277A234830BC00F872EB /* MediaPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				35548970234AD0F900E954A6 /* MovieStats.swift */,
-				35548971234AD0F900E954A6 /* MovieDataAPI.swift */,
 				05829731234A64AA001EFF29 /* Movie.swift */,
 				05829735234A6B49001EFF29 /* MovieTableViewCell.swift */,
 				05829737234A700A001EFF29 /* MovieTableViewController.swift */,
@@ -208,9 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35548972234AD0F900E954A6 /* MovieStats.swift in Sources */,
 				05829738234A700A001EFF29 /* MovieTableViewController.swift in Sources */,
-				35548973234AD0F900E954A6 /* MovieDataAPI.swift in Sources */,
 				05829736234A6B49001EFF29 /* MovieTableViewCell.swift in Sources */,
 				05B2277E234830BC00F872EB /* ViewController.swift in Sources */,
 				05829732234A64AA001EFF29 /* Movie.swift in Sources */,
