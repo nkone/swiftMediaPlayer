@@ -8,33 +8,22 @@
 
 import UIKit
 
-var movieIndex = 0
-var movies = [Movie]()
+
 class MovieTableViewController: UITableViewController {
     
     
-
     //MARK: Private methods
-    
     private func loadMovies() {
        // var index = 1
-        for movieTest in Movie.movieStats.results! {
-            print("\(movieTest)")
-        }
-       /* let totalMovies = Movie.movieStats.results!.count
-        print("\(totalMovies)")
-        let moviePhoto = UIImage(named: "noGameNoLife")
         
-        guard let movie1 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
-            fatalError("Unable to instantiate movie 1")
-        }
+
+        /*
         guard let movie2 = Movie(name: "No Game No Life Zero", image: moviePhoto, rating:8) else {
             fatalError("Unable to instantiate movie 1")
-        }
-        
-        movies += [movie1, movie2]*/
+        }*/
+        //print(movies[0].name)
     }
-    
+
     
     
     override func viewDidLoad() {
@@ -61,7 +50,7 @@ class MovieTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        print (movies.count)
         return movies.count
     }
 
@@ -75,9 +64,8 @@ class MovieTableViewController: UITableViewController {
         let movie = movies[indexPath.row]
         
         cell.movieTitleLabel.text = movie.name
-        cell.movieDescriptionLabel.text = "quj8sK3Phh8"
-        cell.movieImageView.image = movie.image
-        
+        cell.movieDescriptionLabel.text = String(movie.rating)
+        cell.movieImageView.downloaded(from: "https://image.tmdb.org/t/p/w500\(movie.url)")
         // Configure the cell...
 
         return cell

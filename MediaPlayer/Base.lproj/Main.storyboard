@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mIN-Bq-qkH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mOq-n8-6h9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,6 +40,11 @@
                                 <action selector="cancelButton:" destination="BYZ-38-t0r" id="eUp-qz-iBa"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="gkO-lX-BN7">
+                            <connections>
+                                <segue destination="mOq-n8-6h9" kind="show" id="Fzo-qG-E9Z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="trailerView" destination="RkY-7r-f0E" id="l98-Ta-cTG"/>
@@ -48,6 +53,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2280.8000000000002" y="-1.3493253373313345"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="BGs-dC-A49">
+            <objects>
+                <viewController id="mOq-n8-6h9" customClass="HomeViewController" customModule="MediaPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D1c-JN-i9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uM-KW-Vn6">
+                                <rect key="frame" x="170" y="318.5" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="mIN-Bq-qkH" kind="show" id="DZ1-Ql-Jt4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8uM-KW-Vn6" firstAttribute="centerX" secondItem="D1c-JN-i9z" secondAttribute="centerX" id="Jce-Og-Wtz"/>
+                            <constraint firstItem="8uM-KW-Vn6" firstAttribute="centerY" secondItem="D1c-JN-i9z" secondAttribute="centerY" id="Wmq-4Z-ZVe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aTc-Dw-qdX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcl-pY-kfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-757"/>
         </scene>
         <!--Your Movies-->
         <scene sceneID="bj0-bd-eVM">
@@ -89,9 +122,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="oHQ-Ls-izi" secondAttribute="bottom" id="525-Ii-cmN"/>
-                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="leading" secondItem="kNq-jH-7Wc" secondAttribute="leading" id="7IP-O6-SO5"/>
                                         <constraint firstItem="oHQ-Ls-izi" firstAttribute="leading" secondItem="kNq-jH-7Wc" secondAttribute="leading" id="dMq-yJ-98J"/>
-                                        <constraint firstItem="oHQ-Ls-izi" firstAttribute="top" secondItem="kNq-jH-7Wc" secondAttribute="top" id="jrP-Sg-xlh"/>
                                         <constraint firstItem="oHQ-Ls-izi" firstAttribute="top" secondItem="kNq-jH-7Wc" secondAttribute="top" id="pKa-bX-H25"/>
                                     </constraints>
                                 </tableViewCellContentView>
