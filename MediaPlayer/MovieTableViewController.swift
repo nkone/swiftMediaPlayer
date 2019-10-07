@@ -18,6 +18,7 @@ class MovieTableViewController: UITableViewController {
     //MARK: Private methods
     private func loadMovies() {
        // var index = 1
+        if movies.count == 0 {
         movieDataAPI.fetchMovie(){
             object in
             movieStats = object!
@@ -37,6 +38,7 @@ class MovieTableViewController: UITableViewController {
             DispatchQueue.main.async{
                 self.tableView.reloadData()
             }
+        }
         }
     }
 
